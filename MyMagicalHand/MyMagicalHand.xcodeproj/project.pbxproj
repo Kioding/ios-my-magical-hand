@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3385874926C1324000F36481 /* figureClassifier.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 3385874826C1324000F36481 /* figureClassifier.mlproj */; };
+		33BE226226C3504600681870 /* ShapDetectorKeras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 33BE226126C3504600681870 /* ShapDetectorKeras.mlmodel */; };
 		C7927576262C81C900EF5D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927575262C81C900EF5D3A /* AppDelegate.swift */; };
 		C7927578262C81C900EF5D3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927577262C81C900EF5D3A /* SceneDelegate.swift */; };
 		C792757A262C81C900EF5D3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927579262C81C900EF5D3A /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3385874826C1324000F36481 /* figureClassifier.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = figureClassifier.mlproj; sourceTree = "<group>"; };
+		33BE226126C3504600681870 /* ShapDetectorKeras.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ShapDetectorKeras.mlmodel; path = ../../../../../../Downloads/ShapDetectorKeras.mlmodel; sourceTree = "<group>"; };
 		C7927572262C81C900EF5D3A /* MyMagicalHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMagicalHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7927575262C81C900EF5D3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7927577262C81C900EF5D3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3385874B26C1324D00F36481 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3385874826C1324000F36481 /* figureClassifier.mlproj */,
+				33BE226126C3504600681870 /* ShapDetectorKeras.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C7927569262C81C900EF5D3A = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		C7927574262C81C900EF5D3A /* MyMagicalHand */ = {
 			isa = PBXGroup;
 			children = (
+				3385874B26C1324D00F36481 /* Model */,
 				C7927575262C81C900EF5D3A /* AppDelegate.swift */,
 				C7927577262C81C900EF5D3A /* SceneDelegate.swift */,
 				C7927579262C81C900EF5D3A /* ViewController.swift */,
@@ -77,6 +91,7 @@
 				C792756E262C81C900EF5D3A /* Sources */,
 				C792756F262C81C900EF5D3A /* Frameworks */,
 				C7927570262C81C900EF5D3A /* Resources */,
+				33F2C8EE26C1019E005F26A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3385874926C1324000F36481 /* figureClassifier.mlproj in Resources */,
 				C7927582262C81CB00EF5D3A /* LaunchScreen.storyboard in Resources */,
 				C792757F262C81CB00EF5D3A /* Assets.xcassets in Resources */,
 				C792757D262C81C900EF5D3A /* Main.storyboard in Resources */,
@@ -132,12 +148,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33F2C8EE26C1019E005F26A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C792756E262C81C900EF5D3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C792757A262C81C900EF5D3A /* ViewController.swift in Sources */,
+				33BE226226C3504600681870 /* ShapDetectorKeras.mlmodel in Sources */,
 				C7927576262C81C900EF5D3A /* AppDelegate.swift in Sources */,
 				C7927578262C81C900EF5D3A /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
